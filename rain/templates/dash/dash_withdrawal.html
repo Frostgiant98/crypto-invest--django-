@@ -1,0 +1,64 @@
+{% extends 'dash_header_footer.html' %}
+{% block page_title %} {% endblock page_title %}
+{% block body_content %}
+{% load static %}
+         <!-- Page Content  -->
+         <div id="content-page" class="content-page">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-sm-12 col-lg-8 mx-auto">
+                     
+                    
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Withdrawal</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body">
+                           <p>Enter the amount intended to be Withdrawn then enter your correct wallet address, do ensure to double check the address</p>
+                           <form method="post" action="">
+                              <div class="form-group">
+                                 <label for="exampleInputDisabled1">Account</label>
+                                 <input type="text" class="form-control" id="exampleInputDisabled1" disabled="" value="{{request.user.username}}">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputDisabled1">Account Type</label>
+                                <input type="text" class="form-control" id="exampleInputDisabled1" disabled="" value="{{request.user.profile.account_type}}">
+                             </div>
+
+                           {% csrf_token %}
+
+                             <div class="form-group">
+                              <label for="exampleInputDisabled1">Amount</label>
+                              <input type="number" class="form-control" id="" name="amount">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputDisabled1">Wallet</label>
+                              <input type="text" class="form-control" id="" name="wallet">
+                           </div>
+                           
+                           <p>It may take between 24 hours to 48 to Complete(more likely less), please be patient </p>
+                           <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" id="btc" name="customRadio-1" value="btc" class="custom-control-input">
+                              <label class="custom-control-label" for="btc"> Btc </label>
+                           </div>
+                           <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" id="eth" name="customRadio-1" value="eth" class="custom-control-input">
+                              <label class="custom-control-label" for="eth"> Eth </label>  
+                           </div>
+
+                           <div>
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                           </div>
+                                                            
+                           </form>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+
+{% endblock body_content %}

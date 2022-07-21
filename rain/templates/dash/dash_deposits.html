@@ -1,0 +1,61 @@
+{% extends 'dash_header_footer.html' %}
+{% block page_title %} {% endblock page_title %}
+{% block body_content %}
+{% load static %}
+         <!-- Page Content  -->
+         <div id="content-page" class="content-page">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-sm-12 col-lg-8 mx-auto">
+                     
+                    
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Deposit</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body">
+                           <p>Enter Amount Intended to be funded to your Account, a destination wallet will be generated </p>
+                           <form method="post" action="">
+                              <div class="form-group">
+                                 <label for="exampleInputDisabled1">Account</label>
+                                 <input type="text" class="form-control" id="exampleInputDisabled1" disabled="" value="{{request.user.username}}">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputDisabled1">Account Type</label>
+                                <input type="text" class="form-control" id="exampleInputDisabled1" disabled="" value="{{request.user.profile.account_type}}">
+                             </div>
+                             <p> Funding can only be dont with Bitcoin (BTC) </p>
+
+                            {% if request.user.profile.account_type == 'Retirement' %}
+                            <p> Deposit limit must be above <span style="font-size: larger; color: black;"> $10,000</span> </p>
+                            {% elif request.user.profile.account_type == 'Business' %}
+                            <p> Deposit limit must be Between <span style="font-size: larger; color: black;"> $500 - $9,999</span> </p>
+                            {% else %}
+                            <p> Deposit limit must be Between <span style="font-size: larger; color: black;"> $100 - $999</span> </p>
+                            {% endif %}
+                            
+                            <p>To Increase limit go to account Upgrade</p>
+
+                             <div class="form-group">
+                                {% csrf_token %}  
+                             </div> 
+
+                             <div class="form-group">
+                              <label for="exampleInputDisabled1">Amount</label>
+                              <input type="number" class="form-control" id="exampleInputDisabled1" name="depo">
+                           </div>
+
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                              <button type="submit" class="btn iq-bg-danger">Cancel</button>
+                           </form>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+
+{% endblock body_content %}

@@ -1,0 +1,355 @@
+
+{% extends 'header_footer.html' %}
+{% block page_title %}  {% endblock page_title %}
+
+{% load static %}
+
+{% block hero_content %}
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="hero-container">
+    <a href="{% url 'homepage' %}" class="hero-logo" data-aos="zoom-in"><img src={% static "assets/img/hero-logo.png" %} alt=""></a>
+    <h1 data-aos="zoom-in">Welcome To Bit-Infinite Studios</h1>
+    <h2 data-aos="fade-up">An Investment company that looks towards the future, and the future is crypto</h2>
+    {% if user.is_authenticated %}
+    <a data-aos="fade-up" data-aos-delay="200" href="{% url 'newdash' %}" class="btn-get-started scrollto">Dashboard</a>
+    {% else %}
+    <a data-aos="fade-up" data-aos-delay="200" href="{% url 'signup' %}" class="btn-get-started scrollto">Get Started</a>
+    {% endif %}
+  </div>
+</section><!-- End Hero -->
+{% endblock hero_content %}
+
+{% block body_content %}
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>About Bit-Infinite</h2>
+          <p>Why Choose us</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="image">
+              <img src={% static "assets/img/about.jpg" %} class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 ">
+              <h3>Bit-Infinite is an online Investment platform that was established in the year 2017.</h3>
+              <p class="fst-italic">
+                Bit-Infinite was founded in 2017 by cryptocurrency investors with a mission to revolutionize the market and solve economic problems. Bit-Infinite  utilizes blockchain technology to guarantee transactions are made without the need for a 3rd party intermediary. Powered by a robust hardware and software infrastructure, our platform allows investors to participate in trade activities without needing to own cryptocurrency.....
+              </p>
+              <ul>
+                <li><i class="bx bx-trending-up"></i> Invest in an asset that is not correlated to the stock market and has the potential to be large.</li>
+                <li><i class="bx bx-trending-up"></i> Bit-Infinite takes investments into a spread of crypto currencies and gives you exposure to a number of crypto currencies without having to invest in individual crypto coins</li>
+                <li><i class="bx bx-trending-up"></i> Invest for the future and reap the rewards of our high return on investment. Secure your spot as an early investor in cryptocurrency with Bit-Infinite.org </li>
+              </ul>
+              <p>
+                Bit-Infinite is a new cryptocurrency invest company that has high return on investment; you can start making daily or weekly interest from your investments. the bitternetwork is a way to get into cryptocurrency early and reap the benefits of its secure online transaction, low transactions fees and anonymity for buyers.All transactions between users are encrypted using secure blockchain technology.Bit-Infinite has a built in privacy feature which makes it impossible for anyone to trace transactionse
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>We use your Investment to provide you with provide you with multiple streams of Income and we handle the hassle</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
+              <i class="bx bxl-bitcoin"></i>
+              <h4>Cryptocurrency Fidelity</h4>
+              <p>-we direct a large portion of our resources to top Coins and we anticipate every rise and fall and act accordingly to serucre your Investment</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Blockchain DApps</h4>
+              <p>Get started in the world of cryptocurrency. With Bit-Infinite, invest in or accept early currencies, and earn 2-10% return on your investment each month.</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-images"></i>
+              <h4>NFT's</h4>
+              <p>We believe NFT's are the future and we have our hands invested in it, we have a collection of rare whichwe hold and trade, we are all for thr profits</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-shield"></i>
+              <h4>Secure</h4>
+              <p>Our world class cyber security experts work tirelessly to make sure this space is secure to preserve your legacy and investment in more ways than your bank would </p>
+            </div>
+          </div>
+          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url({% static "assets/img/services.jpg" %});' data-aos="fade-left" data-aos-delay="100"></div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Featured Section ======= -->
+    <section id="featured" class="featured">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <figure>
+                  <img src={% static "assets/img/featured-1.png" %} alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <figure>
+                  <img src={% static "assets/img/featured-2.png" %} alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <figure>
+                  <img src={% static "assets/img/featured-3.png" %} alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <figure>
+                  <img src={% static "assets/img/featured-4.png" %} alt="" class="img-fluid">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                  <h4>Your personal Broker</h4>
+                  <p>Brightest minds working tirelessly</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                  <h4>Sit back and relax</h4>
+                  <p>See your Investment rise and If an NFT has been acquired for you, see which one.</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                  <h4>Simple and secure</h4>
+                  <p>Quick deposit and withdrawals When you need them.</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                  <h4>Stay in control</h4>
+                  <p>while Our experts help manage your finances, see everything as it happens in your Dashboard</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Featured Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-7 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-stretch">
+
+            <div class="content" data-aos="fade-up">
+              <h3><strong>Why Us</strong> ?</h3>
+              <p>
+                
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li data-aos="fade-up" data-aos-delay="100">
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Why should I invest with Bit-Infinite <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Are you looking for a way to get into cryptocurrency early? Join bitterns.com today! Bit-Infinite is a company that invests your money with the worlds most famous and successful cryptocurrency investments. Earn up to 100% return on investment in only 30 days.                    </p>
+                  </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="200">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> What are the advantages of Innvesting with Bit-Infinite <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Bit-Infinite is a new way to invest in cryptocurrency. We created a system that can bring you high returns as you sit back and relax. No more guessing how to get into the cryptocurrency world and taking a chance with your investment. Bit-Infinite offers an ideas platform to allow you to unlock the potential power in cryptocurrency                  </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="300">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> How Reliable is Bit-Infinite <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Bit-Infinite is an investment platform. We launched Bit-Infinite to provide our customers with simple, accessible digital investment tools, coupled with the great tech that has helped us make those services better. all our records are online for you to check and verify</p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 align-items-stretch video-box" style='background-image: url("assets/img/why-us.jpg");' data-aos="zoom-in">
+            <a href="https://www.youtube.com/watch?v=LIqQNG_q2us" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Plans</h2>
+          <p>These are Our Various Investment Plans, Pick on that suits your needs</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <h3>Personal</h3>
+              <h4><sup>$</sup>100 - <sup>$</sup>999</h4>
+              <ul>
+                <li>Cryptocurrency</li>
+                <li>Stock market</li>
+                <li>penny stocks</li>
+                <li class="na">Shared NFT's</li>
+                <li class="na">personal NFT's and tokens</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Register</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="box recommended" data-aos="zoom-in">
+              <span class="recommended-badge">Recommended</span>
+              <h3>Business</h3>
+              <h4><sup>$</sup>1,000 - <sup>$</sup>9,999</h4>
+              <ul>
+                <li>Cryptocurrency</li>
+                <li>Stock market</li>
+                <li>penny stocks</li>
+                <li>Shared NFT's</li>
+                <li class="na">personal NFT's and tokens</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Register</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <h3>Retirement</h3>
+              <h4><sup>$</sup>10000 - ∞ </h4>
+              <ul>
+                <li>Cryptocurrency</li>
+                <li>Stock market</li>
+                <li>penny stocks</li>
+                <li>Shared NFT's</li>
+                <li>Your own NFT's and tokens</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Register</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="info d-flex flex-column justify-content-center" data-aos="fade-right">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street,<br>New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-left">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock body_content %}

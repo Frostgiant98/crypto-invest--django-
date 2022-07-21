@@ -1,0 +1,51 @@
+{% extends 'dash_header_footer.html' %}
+{% block page_title %} {% endblock page_title %}
+{% block body_content %}
+{% load static %}
+         <!-- Page Content  -->
+         <div id="content-page" class="content-page">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-sm-12 col-lg-8 mx-auto">
+                     
+                    
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Complete Investment</h4>
+                           </div>
+                        </div>
+                        <div class="col-lg-8">
+                           <div class="card iq-mb-3 border-secondary" >
+                              <div class="card-body text-secondary">
+                                 <h4 class="card-title text-secondary">Primary card title</h4>
+                                 <p class="card-text">To Complete Deposit, sent ${{amount}} in bitcoin to <code id="copy">{{request.user.profile.wallet}}</code>.</p>
+                                 
+<button type="button" class="btn btn-secondary" onclick="copyEvent('copy')">Copy Address</button>
+
+<script>
+    function copyEvent(id)
+    {
+        var str = document.getElementById(id);
+        window.getSelection().selectAllChildren(str);
+        document.execCommand("Copy")
+    }
+</script>
+                                 <p>Ensure to copy the correct wallet address by using the button <br>
+                                    normally Transactions take up to 24 hours to reflect on the dashboard. <br>
+                                    ensure to contact support for any problems faced. <br>
+                                    Please ensure to deposite the exact amount you Enter at the provided address generated
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+
+{% endblock body_content %}

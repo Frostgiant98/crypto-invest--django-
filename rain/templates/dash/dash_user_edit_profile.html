@@ -1,0 +1,39 @@
+{% extends 'dash_header_footer.html' %}
+{% block page_title %} {% endblock page_title %}
+{% block body_content %}
+{% load static %}
+         <!-- Page Content  -->
+         <div id="content-page" class="content-page">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-sm-12 col-lg-8 mx-auto">
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Basic Form</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body">
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo</p>
+                           <form method="post"  action="">
+                              <div class="form-group">
+                                {% csrf_token %}
+                                {% load bootstrap %}
+                                {{ form1 |bootstrap }}
+                                {{ form2 |bootstrap }}
+                              </div>
+                              <div class="form-group">
+                                 
+                              </div>
+                              <div class="d-flex justify-content-center ">
+                                 <input class="bc-white ml-2 loginbutton" type="submit" value="Update">
+                             </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+{% endblock body_content %}
